@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}About ADHD{% endblock %}
+
+{% block content %}
+    <h1 style="text-align: center; text-transform: uppercase;"><strong>ADHD</strong></h1>
+    <p>Attention Deficit Hyperactivity Disorder (ADHD) is a common neurodevelopmental condition that affects how a person thinks, focuses, and behaves. It is typically diagnosed in childhood but can continue into adulthood. People with ADHD may experience difficulties in maintaining attention, controlling impulsive behaviors, or staying still for long periods.</p>
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="{{ url_for('static', filename='images/adhd_image.jpg') }}" alt="ADHD Image" style="max-width:100%; height:auto;">
+    </div>
+    <h2 style="text-transform: uppercase;">Common Symptoms of ADHD</h2>
+    <p>ADHD symptoms usually fall into three categories:</p>
+    <ul>
+        <li><strong>Inattention</strong> – Trouble staying focused, being easily distracted, or frequently losing items.</li>
+        <li><strong>Hyperactivity</strong> – Restlessness, excessive talking, or difficulty staying seated.</li>
+        <li><strong>Impulsivity</strong> – Interrupting conversations, acting without thinking, or difficulty waiting turns.</li>
+    </ul>
+{% endblock %}

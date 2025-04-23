@@ -1,0 +1,122 @@
+ content <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADHD Screening</title>
+    <style>
+        body {
+-            font-family: Arial, sans-serif;
++            font-family: "Times New Roman", Times, serif;
++            font-size: 1rem;
+             margin: 0;
+             padding: 0;
+             background: linear-gradient(135deg, #e0f2f1, #a5d6a7);
+         }
+         h1, h2, h3, h4, h5, h6 {
+-            font-family: "Times New Roman", Times, serif;
+-            font-size: 1.5rem;
+-            font-weight: bold;
+-            text-transform: uppercase;
+-            margin-top: 1rem;
+-            margin-bottom: 1rem;
+-            color: #2e7d32;
++            font-size: 1.5rem;
++            font-weight: bold;
++            text-transform: uppercase;
++            margin-top: 1rem;
++            margin-bottom: 1rem;
++            color: #2e7d32;
+         }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav a {
+            color: white;
+            margin-left: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #c8e6c9;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .button:hover {
+            background-color: #388E3C;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+            transition: border-color 0.3s ease;
+        }
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 8px #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ADHD SCREENING</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('screening') }}">Screening</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        &copy; 2024 ADHD Screening
+    </footer>
+</body>
+</html>

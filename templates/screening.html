@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="text-align: center; text-transform: uppercase;">ADHD Screening</h2>
+<form method="post" action="{{ url_for('screening') }}" style="text-align: center;">
+    <label for="symptoms">Please describe your symptoms in your own words:</label><br /><br />
+    <textarea id="symptoms" name="symptoms" required></textarea><br /><br />
+    <button type="submit" class="button">Submit</button>
+</form>
+{% endblock %}

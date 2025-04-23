@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="text-align: center; text-transform: uppercase;">Screening Results</h2>
+<div class="result-card">
+    <p><strong>Your Input:</strong> {{ user_input }}</p>
+    <p><strong>Likelihood Score:</strong> {{ '%.2f'|format(score) }}</p>
+    <p><strong>Risk Level:</strong> {{ risk_level }}</p>
+    <p><strong>Recommendations:</strong> {{ recommendations }}</p>
+    <div style="text-align: center; margin-top: 1rem;">
+        <a href="{{ url_for('screening') }}" class="button">Try Again</a>
+    </div>
+</div>
+{% endblock %}
